@@ -11,7 +11,6 @@ body {
   margin: 0;
   height: 100%;
   font: 1.3rem/1.61538 "Montserrat", sans-serif;
-  background-color: #f1f3f6;
   }
 
 p {
@@ -79,9 +78,26 @@ p {
 	 padding:30px;
 	 
  }
+ 
+ 
+.donate p {
+    text-align: center;
+    margin: 10px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #00804b;
+}
 
+.box-design{
+	padding: 20px;
+    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2), 0px 6px 20px 0px rgba(0, 0, 0, 0.19);
+	background: #fff;
+    border: 1px solid #e4e5e700;
+    border-radius: 2px;
+}
+ 
 #header {
-  position: absolute;
+ 
   top: 0;
   left: 0;
   width: 100%;
