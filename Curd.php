@@ -51,7 +51,7 @@
 
    if(!$res)
    {
-     return $this->conn->error;;
+     return false;
    }
    else
    {

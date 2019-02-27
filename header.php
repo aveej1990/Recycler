@@ -8,17 +8,6 @@
 	<meta name="keywords" content="website template, css3, one page, bootstrap, app template, web app, start-up">
 	<meta name="author" content="Themesforce and Sarfraz Shaukat for Frittt">
 
-	  <!-- for date picker -->
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.15.1/moment.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.7.14/js/bootstrap-datetimepicker.min.js"></script>
-<script src="alert/dist/sweetalert-dev.js"></script>
-  <link rel="stylesheet" href="alert/dist/sweetalert.css">
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.7.14/css/bootstrap-datetimepicker.min.css">
-
 	<link rel="icon" type="image/png" href="favicons/favicon-16x16.png" sizes="16x16">
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="fonts/font-awesome-4.3.0/css/font-awesome.min.css">
@@ -63,4 +52,17 @@
 				</nav>
 			</div>
 		</header>
+
+		<section class="visual">
+		<div class="container">
+			<div class="text-block">
+				<div class="heading-holder">
+					<h1>Welcome to Scrap Recycling</h1>
+				</div>
+				<p class="tagline">Smart solution for all your waste problems</p>
+				<span class="info">Get motivated now</span>
+			</div>
+		</div>
+		<img src="images/img-bg-01.jpg" alt="" class="bg-stretch">
+	</section>
 	 

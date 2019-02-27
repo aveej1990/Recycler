@@ -4,14 +4,14 @@
  <p>Sell or Donate your Items </p>
  <div class="container">
  
- <div id="success" class="success"></div>
+ <div id="success"  class="success"></div>
 
    <table class="table table-striped">
     <tbody>
 
      <tr>
       <td colspan="1">
-       <form class="well form-horizontal" method="POST">
+       <form class="well form-horizontal" method="POST" id="sellform">
         <fieldset>
          <div class="form-group">
           <label class="col-md-4 control-label">Phone Number</label>
@@ -54,21 +54,28 @@
 
 <div class="form-group">
   <label class="col-md-4 control-label">Pickup Date</label>
-  <div class="col-md-8 inputGroupContainer">
+  <div class="col-md-4 inputGroupContainer">
    <div class='input-group date' id='datetimepicker8'>
     <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
-    <input type='text' class="form-control" name="pdate" id="pdate" />
+    <input type='text' class="form-control" name="pdate" placeholder="please select pickupdate" />
     <span class="input-group-addon">
      <span class="fa fa-calendar">
      </span>
    </span>
  </div>
+</div>   
+<div class="col-md-4 inputGroupContainer">
+  <select class="form-control" id="sel1">
+    <option>10:00 AM to 5:00 PM</option>
+  </select>
+</div>
+
 </div>
 </div>
 <div class="form-group">
  <label class="col-md-4 control-label"></label>
  <div class="col-md-8 inputGroupContainer">
-  <input type="submit" class="btn btn-success" name="submit" value="Submit" onclick="writeComment()"> 
+  <input type="submit" class="btn btn-success" name="submit" value="Submit"> 
   &nbsp;&nbsp; &nbsp;
   <input type="reset" class="btn btn-danger" value="reset" > 
 </div>
@@ -84,40 +91,27 @@
 </section>
 
 <?php include "footer.php" ?>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker-standalone.min.css"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.min.css"></script>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+ 
+  <!-- for date picker -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.15.1/moment.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.7.14/js/bootstrap-datetimepicker.min.js"></script>
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.7.14/css/bootstrap-datetimepicker.min.css">
  
-  <script src="https://cdn.jsdelivr.net/npm/promise-polyfill"></script>
-<script type="text/javascript">
 
-
-  $(function () {
-    $('#datetimepicker8').datetimepicker({
+<script>
+  $(document).ready(function() {
+	  
+	   $('#datetimepicker8').datetimepicker({
       icons: {
         time: "fa fa-clock-o",
         date: "fa fa-calendar",
         up: "fa fa-arrow-up",
-        down: "fa fa-arrow-down"
+        down: "fa fa-arrow-down"	
       }
     });
-  });
-
-
-
-</script>
-
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-
-<script>
-  $(document).ready(function() {
+	
+	
                 $('form').submit(function(event) { //Trigger on form submit
 
              //Fetch form data
@@ -138,15 +132,18 @@
                         dataType    : "json",
                         data        : {'phoneNumber':mobile,'fullName':name,'address':address,'city':city,'landmark':landmark,'postcode':postalcode,'pdate':pdate}, //Forms name
                         success     : function(data) {
-                          if(data)
+						
+                          if(data.msg=='success')
                            {  
 					         
                              //swal("success...we will meet you between 10:00 AM to 6:00 PM on " +pdate); 
-							 $("#success").html("success...we will meet you between 10:00 AM to 6:00 PM");
+							 $("#success").html("<div class='alert alert-info'>Order placed...we will meet you between 10:00 AM to 6:00 PM on your pickupdate</div>");
+							 $("#sellform")[0].reset();
                            } 
                          else
                          {
-							 $("#success").html("Something went wrong");
+							  if(data.msg=='error')
+							 $("#success").html("<div class='alert alert-danger'>Something went wrong</div>");
                          }
 
                        }

@@ -1,16 +1,5 @@
 <?php include "header.php" ?>
-	<section class="visual">
-		<div class="container">
-			<div class="text-block">
-				<div class="heading-holder">
-					<h1>Welcome to Scrap Recycling</h1>
-				</div>
-				<p class="tagline">Smart solution for all your waste problems</p>
-				<span class="info">Get motivated now</span>
-			</div>
-		</div>
-		<img src="images/img-bg-01.jpg" alt="" class="bg-stretch">
-	</section>
+	
 	<section class="main">
 		<div class="container">
 			<div id="cta">
