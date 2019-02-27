@@ -87,7 +87,14 @@ p {
     font-weight: bold;
     color: #00804b;
 }
-
+.success
+{
+	text-align: center;
+    margin: 10px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #00804b;
+}
 .box-design{
 	padding: 20px;
     box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2), 0px 6px 20px 0px rgba(0, 0, 0, 0.19);

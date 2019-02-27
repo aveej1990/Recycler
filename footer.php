@@ -3,7 +3,7 @@
 			<div class="footer-holder">
 				<div class="row  text-center">
 					<div class="col-md-12">
-						<a href="#"><img src="images/footer-logo1.jpg" width=200 height=100 class="animated infinite bounce" alt="Sports HTML Template"></a>
+						<a href="#"><img src="images/footer-logo1.jpg" width=200 height=100 class="animated  bounce" alt="Sports HTML Template"></a>
 					</div>
 					  
 				</div>
