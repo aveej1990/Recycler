@@ -135,9 +135,8 @@
 						
                           if(data.msg=='success')
                            {  
-					         
                              //swal("success...we will meet you between 10:00 AM to 6:00 PM on " +pdate); 
-							 $("#success").html("<div class='alert alert-info'>Order placed...we will meet you between 10:00 AM to 6:00 PM on your pickupdate</div>");
+							 $("#success").html("<div class='alert alert-info'>Order placed...we will meet you between 10:00 AM to 5:00 PM on your pickupdate</div>");
 							 $("#sellform")[0].reset();
                            } 
                          else
